@@ -1,5 +1,5 @@
 #!/bin/bash
-wget -O ~/ceremonyclient/node/node_csv.sh "https://raw.githubusercontent.com/Mak-Wei-Zheng/bash_scripting/main/node_info.sh"
+wget -O ~/ceremonyclient/node/node_info.sh "https://raw.githubusercontent.com/Mak-Wei-Zheng/bash_scripting/main/node_info.sh"
 
 chmod +x ~/ceremonyclient/node/node_info.sh
 
