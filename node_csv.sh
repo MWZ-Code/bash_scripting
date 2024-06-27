@@ -70,7 +70,7 @@ get_unclaimed_balance() {
 
 # Function to write data to CSV file
 write_to_csv() {
-    local filename="$HOME//ceremonyclient/node/balance_log.csv"
+    local filename="$HOME/ceremonyclient/node/balance_log.csv"
     local data="$1"
 
     if [ ! -f "$filename" ] || [ ! -s "$filename" ]; then
