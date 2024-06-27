@@ -8,20 +8,6 @@ SCRIPT_VERSION="0.0.0"
 
 version="1.4.20"
 
-# # Auto update feature to be included in the future if necessary
-# # Function to check for newer script version
-# check_for_updates() {
-#     LATEST_VERSION=$(wget -qO- "https://github.com/lamat1111/QuilibriumScripts/raw/main/tools/qnode_balance_checker.sh" | grep 'SCRIPT_VERSION="' | head -1 | cut -d'"' -f2)
-#     if [ "$SCRIPT_VERSION" != "$LATEST_VERSION" ]; then
-#         wget -O ~/scripts/qnode_balance_checker.sh "https://github.com/lamat1111/QuilibriumScripts/raw/main/tools/qnode_balance_checker.sh"
-#         chmod +x ~/scripts/qnode_balance_checker.sh
-#         sleep 1
-#     fi
-# }
-
-# # Check for updates and update if available
-# check_for_updates
-
 # Function to fetch node binary and set NODE_BINARY variable
 fetch_node_binary() {
     if [[ "$OSTYPE" == "linux-gnu"* ]]; then
@@ -70,7 +56,7 @@ get_unclaimed_balance() {
 
 # Function to write data to CSV file
 write_to_csv() {
-    local filename="$HOME/ceremonyclient/node/balance_log.csv"
+    local filename="$HOME/ceremonyclient/node/balance.log"
     local data="$1"
 
     if [ ! -f "$filename" ] || [ ! -s "$filename" ]; then
@@ -101,7 +87,7 @@ main() {
     # echo $balance
     
     if [ -n "$balance" ]; then
-        local filename="$HOME/ceremonyclient/node/balance_log.csv"
+        local filename="$HOME/ceremonyclient/node/balance.log"
         
         local data_to_write="$current_time,$balance"
         
