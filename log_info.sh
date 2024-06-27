@@ -4,7 +4,7 @@ wget -O ~/ceremonyclient/node/node_info.sh "https://raw.githubusercontent.com/Ma
 chmod +x ~/ceremonyclient/node/node_info.sh
 
 # Define the cron job line
-cron_job="* * * * * ~/ceremonyclient/node/node_info.sh"
+cron_job="0 * * * * ~/ceremonyclient/node/node_info.sh"
 
 # Check if the cron job already exists
 crontab -l | grep -F "$cron_job" > /dev/null

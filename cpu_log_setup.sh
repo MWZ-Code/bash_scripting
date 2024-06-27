@@ -4,7 +4,7 @@ wget -O ~/ceremonyclient/node/turbo_log.sh "https://raw.githubusercontent.com/Ma
 chmod +x ~/ceremonyclient/node/turbo_log.sh
 
 # Define the cron job line
-cron_job="0 * * * * ~/ceremonyclient/node/turbo_log.sh"
+cron_job="* * * * * ~/ceremonyclient/node/turbo_log.sh"
 
 # Check if the cron job already exists
 crontab -l | grep -F "$cron_job" > /dev/null
