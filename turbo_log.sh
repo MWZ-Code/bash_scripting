@@ -8,6 +8,6 @@ cd ~/ceremonyclient/node
 echo "Log Time: $(date)" >> ~/ceremonyclient/node/turbo.log
 
 # Execute the command and append the output to the log file
-turbostat --Summary --num_iterations 1>> ~/ceremonyclient/node/turbo.log 2>&1
+turbostat --Summary --num_iterations 1 >> ~/ceremonyclient/node/turbo.log 2>&1
 
 echo "____LINE__BREAK____" >> ~/ceremonyclient/node/turbo.log 2>&1
